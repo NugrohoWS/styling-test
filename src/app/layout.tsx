@@ -1,16 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { tstarPro } from "./fonts/font";
+import AppHeader from "./components/AppHeader";
+import AppFooter from "./components/AppFooter";
+import Link from "next/link";
+import Image from "next/image";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,10 +18,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${tstarPro.variable} antialiased`}>
+        <AppHeader />
         {children}
+        <AppFooter />
+        <div className="fixed bottom-[72px] right-[60px] z-50">
+          <Link href="https://wa.me/6281234567890" target="_blank">
+            <Image
+              src="/assets/svg/whatsapp.svg"
+              alt="Whatsapp"
+              width={72}
+              height={72}
+            />
+          </Link>
+        </div>
       </body>
     </html>
   );

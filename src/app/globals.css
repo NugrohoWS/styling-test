@@ -7,15 +7,33 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-trebuchet);
+}
+
+.home-hero-gradient{
+  background: linear-gradient(360deg, rgba(43, 43, 43, 0.8) 0%, rgba(109, 124, 130, 0) 100%);
+}
+
+.home-expertise-shadow{
+  box-shadow: 6px 6px 16px 0px #504B4933;
+}
+
+.home-join-gradient{
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.swiper-pagination-progressbar {
+  background: rgba(255, 255, 255, 0.25) !important;
+  position: absolute !important;
+  width: 100% !important;
+  height: 2px !important; 
+  top: auto !important;
+  bottom: 0 !important;
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: #FFFFFF !important;
 }
