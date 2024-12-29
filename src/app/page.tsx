@@ -1,11 +1,17 @@
+import HomeHero from "./components/home/HomeHero";
+import HomeExpertise from "./components/home/HomeExpertise";
+import HomeReviews from "./components/home/HomeReviews";
+import HomeActivities from "./components/home/HomeActivities";
+import HomeJoin from "./components/home/HomeJoin";
+
 export default function Home() {
   return (
-    <main>
-      <h1 className="font-tstarPro text-4xl font-bold">Hello World</h1>
-      <p className="font-trebuchet text-lg">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-        quos.
-      </p>
+    <main className="main-home relative">
+      <HomeHero />
+      <HomeExpertise />
+      <HomeReviews />
+      <HomeActivities />
+      <HomeJoin />
     </main>
   );
 }
